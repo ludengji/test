@@ -3,7 +3,7 @@ package mongodb;
 import com.mongodb.BasicDBObject;
 import com.mongodb.WriteResult;
 
-import org.junit.AfterClass;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,8 +25,10 @@ import mongodb.model.Person;
 public class TestMongo {
 
     public static final BasicQuery QUERY = new BasicQuery(new BasicDBObject("name", "james"));
+
     @Autowired
     private MongoTemplate mongoTemplate;
+
 
     @Before
     public void before() {
@@ -58,7 +60,7 @@ public class TestMongo {
         Assert.assertNotNull(writeResult);
     }
 
-    @AfterClass
+    @After
     public void afterClass() {
         mongoTemplate.findAllAndRemove(QUERY, Person.class);
     }
