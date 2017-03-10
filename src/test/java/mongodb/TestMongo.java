@@ -3,18 +3,16 @@ package mongodb;
 import com.mongodb.BasicDBObject;
 import com.mongodb.WriteResult;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.List;
 
 import conf.TestConfig;
 import mongodb.model.Person;
@@ -35,7 +33,6 @@ public class TestMongo {
         String collectionName = "person";
         mongoTemplate.getCollection(collectionName);
         mongoTemplate.save(new Person("james", 11));
-        System.out.println("==============");
     }
 
     @Test
@@ -60,4 +57,10 @@ public class TestMongo {
         WriteResult writeResult = mongoTemplate.remove(QUERY, Person.class);
         Assert.assertNotNull(writeResult);
     }
+
+    @AfterClass
+    public void afterClass() {
+        mongoTemplate.findAllAndRemove(QUERY, Person.class);
+    }
+
 }
