@@ -1,4 +1,4 @@
-package mongodb;
+package com.local.test.mongodb;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.WriteResult;
@@ -15,7 +15,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import conf.TestConfig;
-import mongodb.model.Person;
+import com.local.test.mongodb.model.Person;
 
 /**
  * Created by meisei on 2017/3/10.

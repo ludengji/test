@@ -1,4 +1,4 @@
-package mongodb;
+package com.local.test.mongodb;
 
 import com.google.common.collect.Lists;
 
@@ -13,15 +13,11 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
-import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
 import org.springframework.data.mongodb.core.query.BasicQuery;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import mongodb.model.Person;
+import com.local.test.mongodb.model.Person;
 
 /**
  * Created by meisei on 2017/3/9.
