@@ -1,4 +1,4 @@
-package jwt;
+package com.local.test.jwt;
 
 import org.joda.time.DateTime;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
 
-import conf.TestConfig;
+import com.local.test.conf.TestConfig;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
