@@ -11,7 +11,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
  */
 @Configuration
 @PropertySource("classpath:application-test.properties")
-@ComponentScan("conf")
+@ComponentScan("com.local.test.conf")
 public class TestConfig {
 
     @Bean

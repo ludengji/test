@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import conf.TestConfig;
+import com.local.test.conf.TestConfig;
 import com.local.test.mongodb.model.Person;
 
 /**
